@@ -498,15 +498,23 @@ main {
         overflow: auto auto;
 
         .watch-small-container {
+            display: flex;
             flex-basis: 0px;
             flex-grow: 1;
             overflow-y: auto; 
+
+            @media (min-width: 768px) {
+                flex-direction: column;
+                scroll-snap-type: x mandatory;
+                overflow: auto auto;
+            }
         }
 
         .watch-small {
 
             img {
                 width: 90%;
+                min-width: 200px;
                 margin-bottom: .5rem;
                 margin-left: .5rem;
             }
